@@ -11,7 +11,7 @@ DMZ, Cloud integration, and controlled Internet access.
 ---
 
 ## Topology
-![Network Topology](01-Topology/enterprise-topology.png)
+![Network Topology](01-Topology/Enterprise-Topology.png)
 
 ---
 
