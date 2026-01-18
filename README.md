@@ -89,16 +89,23 @@ Screenshots of all verification steps are included in the `03-Screenshots` folde
 
 ---
 
-## Repository Structure
+### Repository Structure
 
+This repository is organized to separate design, configuration, and verification
+artifacts for easier review.
+```
 Secure-Enterprise-Network-CCNA/
-│
-├── 01-Topology/ # Network topology screenshots
-├── 02-Configs/ # Router and switch configurations
-├── 03-Screenshots/ # Verification screenshots
-├── 04-Documentation/ # Network design documentation
-└── README.md # Project overview
-
+├── 01-Topology/
+│ └── Network topology diagrams and Packet Tracer screenshots
+├── 02-Configs/
+│ └── Router and switch configuration files (HQ, Branch, DMZ)
+├── 03-Screenshots/
+│ └── Verification outputs for VLANs, ACLs, NAT, OSPF, and SSH
+├── 04-Documentation/
+│ └── Network design notes and implementation details
+└── README.md
+└── Project overview and high-level explanation
+```
 ---
 
 ## Lessons Learned
