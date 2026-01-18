@@ -1,4 +1,4 @@
-# Secure Enterprise Network Project
+# 🔒 Secure Enterprise Network Project
 
 ## Overview
 This project was designed and implemented as a hands-on CCNA-level network
@@ -10,6 +10,25 @@ DMZ, Cloud integration, and controlled Internet access.
 
 ---
 
+## Objectives
+- Implement VLAN segmentation for security and performance.
+- Apply ACLs to enforce least-privilege access.
+- Configure OSPF with MD5 authentication for secure routing.
+- Use NAT (PAT & Static) for Internet access and service exposure.
+- Secure device management via SSH and port security.
+
+---
+
+## Technologies Used
+- Cisco IOS (Router & Switch)
+- VLANs & Trunking (802.1Q)
+- OSPF with MD5 Authentication
+- Access Control Lists (ACLs)
+- NAT (Overload & Static)
+- Port Security & SSH
+
+  ---
+  
 ## Topology
 ![Network Topology](01-Topology/Enterprise-Topology.png)
 
@@ -79,3 +98,10 @@ Secure-Enterprise-Network-CCNA/
 ├── 03-Screenshots/ # Verification screenshots
 ├── 04-Documentation/ # Network design documentation
 └── README.md # Project overview
+
+---
+
+## Lessons Learned
+- How to segment networks using VLANs.
+- The importance of applying ACLs close to the source.
+- How OSPF authentication prevents rogue router attacks.
