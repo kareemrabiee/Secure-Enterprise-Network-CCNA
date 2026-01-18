@@ -1,0 +1,36 @@
+# Packet Tracer Project Files
+*.pkt
+*.pkz
+*.pka
+
+# Packet Tracer Autosave/Backup Files
+*.pkt.bak
+*.pkz.bak
+*_backup.pkt
+*_autosave.pkt
+
+# Temporary Files
+*.tmp
+*.temp
+~$*
+
+# System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE/Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Log Files
+*.log
+debug.txt
+
+# Output/Export Files (if any)
+*.pdf
+*.zip
+*.rar
+*.7z
