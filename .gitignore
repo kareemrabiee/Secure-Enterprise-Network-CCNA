@@ -1,35 +1,35 @@
-# Packet Tracer Project Files
+# Ignore all .pkt files except the main lab file in 05-PacketTracer-Lab
 *.pkt
+!05-PacketTracer-Lab/enterprise-network-lab.pkt
+
+# Packet Tracer backup files
 *.pkz
 *.pka
-
-# Packet Tracer Autosave/Backup Files
 *.pkt.bak
-*.pkz.bak
 *_backup.pkt
 *_autosave.pkt
 
-# Temporary Files
+# Temporary files
 *.tmp
 *.temp
 ~$*
 
-# System Files
+# System files
 .DS_Store
 Thumbs.db
 desktop.ini
 
-# IDE/Editor Files
+# IDE/Editor files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# Log Files
+# Log files
 *.log
 debug.txt
 
-# Output/Export Files (if any)
+# Output/Export files
 *.pdf
 *.zip
 *.rar

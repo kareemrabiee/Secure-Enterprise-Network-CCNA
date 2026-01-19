@@ -1,114 +1,97 @@
-# 🔒 Secure Enterprise Network Project
+# 🔒 Secure Enterprise Network (CCNA Lab)
 
 ## Overview
-This project was designed and implemented as a hands-on CCNA-level network
-to practice realistic enterprise security concepts such as segmentation,
-access control, and secure routing.
+This project represents a hands-on enterprise network built while reviewing
+CCNA concepts, with a focus on practical security, segmentation, and routing.
 
-The network simulates a company with a Headquarter, Branch office,
-DMZ, Cloud integration, and controlled Internet access.
-
----
-
-## Objectives
-- Implement VLAN segmentation for security and performance.
-- Apply ACLs to enforce least-privilege access.
-- Configure OSPF with MD5 authentication for secure routing.
-- Use NAT (PAT & Static) for Internet access and service exposure.
-- Secure device management via SSH and port security.
+The topology simulates a small enterprise environment including:
+- Headquarters
+- Branch office
+- DMZ
+- Cloud connectivity
+- Controlled Internet access
 
 ---
 
-## Technologies Used
-- Cisco IOS (Router & Switch)
-- VLANs & Trunking (802.1Q)
-- OSPF with MD5 Authentication
-- Access Control Lists (ACLs)
-- NAT (Overload & Static)
-- Port Security & SSH
+## Project Scope
 
-  ---
-  
+- Multi-site enterprise topology
+- Secure inter-VLAN communication
+- Controlled user, guest, and server access
+- Dynamic routing between sites
+
+---
+
+## Implemented Features
+
+- VLAN segmentation for users, servers, guest, and management
+- Extended ACLs enforcing least-privilege traffic rules
+- OSPF routing with MD5 authentication
+- NAT (PAT for internal users, Static NAT for DMZ services)
+- SSH-only device management
+- Port security on access switch ports
+
+---
+
 ## Topology
+
 ![Network Topology](01-Topology/Enterprise-Topology.png)
-
----
-
-## Key Implementations
-
-- **VLAN Segmentation**  
-  Separate VLANs were used for Users, Servers, Guest, and Management networks
-  to reduce broadcast traffic and improve security.
-
-- **Access Control Lists (ACLs)**  
-  Extended ACLs were applied inbound on router interfaces to control
-  inter-VLAN traffic and Internet access based on least privilege.
-
-- **Network Address Translation (NAT)**  
-  PAT (overload) is used for internal user Internet access, while Static NAT
-  is configured for DMZ services that must be reachable from outside.
-
-- **OSPF Routing with Authentication**  
-  OSPF is used for dynamic routing between HQ, Branch, and Cloud routers.
-  MD5 authentication is enabled to protect routing updates.
-
-- **Secure Device Management (SSH)**  
-  All devices are managed using SSH only. VTY access is restricted
-  using standard ACLs.
-
-- **Port Security**  
-  Port security is enabled on access switch ports to limit the number
-  of allowed MAC addresses and prevent unauthorized access.
 
 ---
 
 ## Verification
 
-The following commands were used during testing to verify that each feature
-was working as intended:
+Configuration and behavior were verified using Cisco IOS commands and real
+traffic testing, including:
 
-- VLANs: `show vlan brief`
-- Trunk links: `show interfaces trunk`
-- Port security: `show port-security interface`
-- ACLs: `show access-lists`
-- NAT: `show ip nat translations`
-- OSPF: `show ip ospf neighbor`
-- SSH: `show ip ssh`
+- show vlan brief
+- show interfaces trunk
+- show port-security interface
+- show access-lists
+- show ip nat translations
+- show ip ospf neighbor
+- show ip ssh
 
-Screenshots of all verification steps are included in the `03-Screenshots` folder.
+Verification screenshots are available in the `03-Screenshots` directory.
+
+---
+
+## Lessons Learned
+
+- Small ACL mistakes can completely break connectivity
+- Planning traffic flow is more important than memorizing commands
+- OSPF authentication adds an important security layer
+- Verification is a critical part of any network deployment
 
 ---
 
 ## Limitations
 
-- Advanced security controls such as firewall zones, IDS/IPS, and centralized
-  logging were not implemented due to the CCNA-level scope of the project.
-- The design focuses on foundational network security and segmentation concepts.
-- The project can be extended to cloud environments using VPC subnets,
-  security groups, and routing tables.
+- Advanced security features such as firewall zones, IDS/IPS, and centralized
+  logging were not implemented due to the CCNA-level scope
+- The focus is on foundational enterprise networking and security concepts
 
 ---
 
-### Repository Structure
-
-This repository is organized to separate design, configuration, and verification
-artifacts for easier review.
+## Repository Structure
 ```
 Secure-Enterprise-Network-CCNA/
-├── 01-Topology/
-│ └── Network topology diagrams and Packet Tracer screenshots
-├── 02-Configs/
-│ └── Router and switch configuration files (HQ, Branch, DMZ)
-├── 03-Screenshots/
-│ └── Verification outputs for VLANs, ACLs, NAT, OSPF, and SSH
-├── 04-Documentation/
-│ └── Network design notes and implementation details
+├── 01-Topology/        # Network topology diagrams
+├── 02-Configs/         # Router and switch configurations
+├── 03-Screenshots/     # Verification outputs
+├── 04-Documentation/   # Network design notes
+├── 05-PacketTracer-Lab # Packet Tracer lab file
 └── README.md
-└── Project overview and high-level explanation
 ```
 ---
 
-## Lessons Learned
-- How to segment networks using VLANs.
-- The importance of applying ACLs close to the source.
-- How OSPF authentication prevents rogue router attacks.
+## Notes
+
+This project was built as part of CCNA review and hands-on practice.
+It reflects real configuration challenges encountered during implementation.
+
+---
+
+## License
+
+MIT License
